@@ -144,3 +144,56 @@ main {
 .container .profile-results.hide {
   display: none;
 }
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Estilo para o card do perfil do GitHub */
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-md) auto;
+  max-width: 32rem;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--ring);
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-info {
+  flex: 1;
+  text-align: left;
+}
+
+.profile-info h2 {
+  font-size: var(--font-xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.profile-info p {
+  font-size: var(--font-md);
+  color: var(--muted-foreground);
+}
